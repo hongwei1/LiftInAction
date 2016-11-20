@@ -1,6 +1,3 @@
-import java.io.Serializable
-
-import net.liftweb.common.Box
 import net.liftweb.mapper._
 import net.liftweb.util.FieldError
 
@@ -65,6 +62,8 @@ val validations: List[(String) => List[FieldError]] = Book.title.validations
 
 //Book.findAll(InRaw( Book.publisher,"SELECT id FROM publishers WHERE createdat > (CURRENT_DATE - interval '2 days')", IHaveValidatedThisSQL("Hongwei", "2016-11-20")))
 Book.findAll(Like(Book.title, "% in Action"))
+Book.findAll(Like(Book.title, "% in Action"))
+Book.findAll(Like(Book.title, "% in Action"))//add three
 //Book.findAll(StartAt(0),MaxRows(1))
 //Book.findAll(OrderBy(Book.title, Ascending))
 //Book.findAll(OrderBy(Book.title, Descending))

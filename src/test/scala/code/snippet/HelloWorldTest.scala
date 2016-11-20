@@ -3,15 +3,13 @@ package snippet
 
 import java.util.Date
 
-import net.liftweb.http._
-import net.liftweb.util._
+import code.lib._
 import net.liftweb.common._
-import Helpers._
-import lib._
+import net.liftweb.http._
+import net.liftweb.util.Helpers._
+import org.specs2.execute.{AsResult, Result}
 import org.specs2.mutable.Specification
 import org.specs2.specification.AroundEach
-import org.specs2.execute.AsResult
-import org.specs2.execute.Result
 
 
 object HelloWorldTestSpecs extends Specification with AroundEach {

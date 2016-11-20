@@ -1,15 +1,11 @@
 package code 
 package snippet 
 
-import scala.xml.{NodeSeq, Text}
-import net.liftweb.util._
-import net.liftweb.common._
 import java.util.Date
 
 import code.lib._
-import Helpers._
-import code.model.User
-import net.liftweb.mapper.MappedString
+import net.liftweb.common._
+import net.liftweb.util.Helpers._
 
 class HelloWorld {
   lazy val date: Box[Date] = DependencyFactory.inject[Date] // inject the date

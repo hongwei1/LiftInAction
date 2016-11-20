@@ -22,7 +22,7 @@ class Account extends LongKeyedMapper[Account] with IdPK {
   def updateAndSave(value: Long) = balance(balance.is + value).save
 }
 
-import net.liftweb.util.{FieldIdentifier,FieldError}
+import net.liftweb.util.{FieldError, FieldIdentifier}
 
 object AccountValidations {
   def notLessThanZero(field : FieldIdentifier)(amount : Long) = 

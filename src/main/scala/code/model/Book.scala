@@ -4,10 +4,8 @@ package code.model
 // but as it happens with mapper models you are pretty much using
 // most of the types, and it becomes rather verbose to import
 // more than 10 or 15 types.
+import net.liftweb.common.Full
 import net.liftweb.mapper._
-import net.liftweb.common.{Box, Full, Empty, Failure, _}
-
-import scala.tools.nsc.io.Socket.Box
 
 object Book extends Book with LongKeyedMetaMapper[Book] {
   override def dbTableName = "books"
@@ -47,7 +45,7 @@ class Book extends LongKeyedMapper[Book]
 
 }
 
-import net.liftweb.util.{FieldIdentifier, FieldError}
+import net.liftweb.util.{FieldError, FieldIdentifier}
 
 object Validations {
   def onlyInActionBooks(field: FieldIdentifier)(string: String) =
