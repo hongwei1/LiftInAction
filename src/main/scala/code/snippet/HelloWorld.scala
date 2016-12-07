@@ -2,7 +2,7 @@ package code
 package snippet 
 
 import java.util.Date
-
+import scala.xml.NodeSeq
 import code.lib._
 import net.liftweb.common._
 import net.liftweb.util.Helpers._
@@ -11,8 +11,7 @@ class HelloWorld {
   lazy val date: Box[Date] = DependencyFactory.inject[Date] // inject the date
 
   // replace the contents of the element with id "time" with the date
-  def howdy = "#time *" #> date.map(_.toString ) //#> is implicit conversion, to make the time
-  def howdy1 = "#content *" #> date.map("\n"+_.toString+ "HongweiZHang!!!!!!!" ) //#> is implicit conversion, to make the time
+  def howdy =  "#time *" #> date.map(_.toString ) //#> is implicit conversion, to make the time
 
 
   /*
