@@ -2,7 +2,6 @@ package code
 package snippet 
 
 import java.util.Date
-import scala.xml.NodeSeq
 import code.lib._
 import net.liftweb.common._
 import net.liftweb.util.Helpers._
@@ -10,10 +9,10 @@ import net.liftweb.util.Helpers._
 class HelloWorld {
   lazy val date: Box[Date] = DependencyFactory.inject[Date] // inject the date
 
+  def render = "*" #> <strong>hello world!</strong>
+
   // replace the contents of the element with id "time" with the date
   def howdy =  "#time *" #> date.map(_.toString ) //#> is implicit conversion, to make the time
-
-
   /*
    lazy val date: Date = DependencyFactory.time.vend // create the date via factory
 
