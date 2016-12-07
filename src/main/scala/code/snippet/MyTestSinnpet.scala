@@ -11,6 +11,5 @@ class MyTestSinnpet {
 
   def myFormat = " *" #> <strong>hello world!</strong>
 
-
 }
 

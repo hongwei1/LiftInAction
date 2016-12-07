@@ -1,0 +1,22 @@
+<html xmlns=http://www.w3.org/1999/xhtml xmlns:lift="http://liftweb.net/">
+<head>
+    <title>demo:demo:1.0-SNAPSHOT</title></head>
+<body>
+    <lift:bind name="content"/>
+    <lift:surround with="default" at="content">
+        <h2>Your content goes here</h2>
+    </lift:surround>
+
+    <lift:embed what="/foo/_bar"/>
+
+    <lift:surround with="default" at="content">
+        <head>
+            <script type="text/javascript" src="thing.js"></script>
+        </head>
+        <h2>
+            Whatever Page
+        </h2>
+        ...
+    </lift:surround>
+</body>
+</html>
